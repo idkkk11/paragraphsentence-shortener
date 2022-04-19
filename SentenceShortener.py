@@ -4,9 +4,9 @@ import os
 import pandas as pd
 import numpy as np
 
-# Reading of excel file and importing the data as an array.
+# Reading of excel file (column C) and importing the data as an array.
 size = 0 
-df = pd.read_excel("DA_HongKong_QA.xlsx", index_col=None, usecols="C")
+df = pd.read_excel("spreadsheetname.xlsx", index_col=None, usecols="C")
 array = df.to_numpy()
 flattened = array.flatten()
 size = flattened.size
@@ -37,4 +37,4 @@ for i in range (0, size):
 df2 = pd.DataFrame(list)
 
 # Converts and exports the dataframe into an excel file.
-df2.to_excel('./HK.xlsx')
+df2.to_excel('./shortened.xlsx')
